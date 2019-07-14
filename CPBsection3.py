@@ -21,7 +21,7 @@ print("Subtraction: 4-2 =2")
 print("Multiplication: 2*3 =6")
 print("Division: 4/2 =2")
 print("Powers: 2**3 =8")
-print("Roots: 2**0.5 = square root of 2")
+print("Roots: 4**0.5 = square root of 4 = 2")
 print("Floor Division: 3//2 =1")
 print("Modulous/Remainder: 7%3 =4")
 print("Python follows order of opperations: 2+10*10+3 =105")
@@ -135,6 +135,9 @@ print("\n")
 #Lists
 mylist = [1,2,3]
 my_list = ['STRING', 100, 23.2]
+mlist = [0]*3
+print("compose list: my_list = ['STRING', 100, 23.2]")
+print("or if all same value: mlist = [0]*3: mlist = ", mlist)
 len(mylist)
 print('Lists are ordered series of elements: mylist = ', mylist)
 print("They do not have to contain the same objects: my_list = ", my_list)
