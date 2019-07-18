@@ -10,13 +10,13 @@ print("\n")
 
 def ran_check(num,low,high):
     ''' checks if # in given range inclusive of high & low, prints statement '''
-    if low<num<high:
+    if low<num<high: #alternately: if num in range(low,high):
         print(f'{num} is range of {low} & {high}')
     else:
         print(f'{num} is not in range of {low} & {high}')
 def ran_bool(num,low,high):
     ''' checks if # in given range inclusive of high & low, returns boolean '''
-    return low<num<high
+    return num in range(low,high)
 help(ran_check)
 help(ran_bool)
 ran_check(5,2,9)
