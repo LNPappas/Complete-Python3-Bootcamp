@@ -215,9 +215,9 @@ def count_primes(num):
             if x%y == 0:
                 x += 2
                 break
-        else:
-            primes.append(x)
-            x += 2
+            else:
+                primes.append(x)
+                x += 2
     print(primes)
     return len(primes)
 

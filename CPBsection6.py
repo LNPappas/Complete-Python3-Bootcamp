@@ -104,4 +104,55 @@ def myfunc(*args,**kwargs):
     print(f'I would like {args[1]} {kwargs["food"]}')
 
 myfunc(1,2,3, fruit='orange', food='cheeeseburgers')
+print("\n")
 
+#map() function: can map a function to a list, iterating through the list and applying it to the function
+def square(num):
+    return num**2
+nums = [i for i in range(0,6)]
+for item in map(square,nums):
+    print(item)
+
+print(list(map(square, nums))) #pass in function itself as an arugument, not square()
+
+#filter() function: filter by a function that returns true or false
+def check_even(num):
+    return num%2 == 0
+
+print(list(filter(check_even, nums)))
+print("\n")
+
+#lambda expressions
+def square(num): return num**2 #original function on one line
+
+square = lambda num: num**2 #assigned to square but normally don't assign lambdas
+print(square(5))
+
+print(list(map(lambda num:num**2, nums)))
+print(list(filter(lambda num:num%2==0, nums)))
+names = ['Evie', 'Evan']
+print(list(map(lambda x:x[0],names)))
+print(list(map(lambda x:x[::-1],names)))
+print("\n")
+
+#nested statements
+x=25
+def printer():
+    x = 50
+    return x
+print(x)
+print(printer())
+'''
+LEGB Rule:
+Local
+Enclosing function locals
+Global
+Built-in
+'''
+name = 'THIS IS A GLOBAL STRING'
+def greet():
+    name = 'Sammy'
+    def hello():
+        print('Hello '+name)
+    hello()
+greet()
