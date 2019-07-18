@@ -135,7 +135,7 @@ print(list(map(lambda x:x[0],names)))
 print(list(map(lambda x:x[::-1],names)))
 print("\n")
 
-#nested statements
+#nested statements and scope
 x=25
 def printer():
     x = 50
@@ -149,10 +149,21 @@ Enclosing function locals
 Global
 Built-in
 '''
-name = 'THIS IS A GLOBAL STRING'
+print(name)
 def greet():
-    name = 'Sammy'
+    name = 'enclosing' #enclosing function
+    print(name)
     def hello():
+        name = 'local' #local function, only effects function not higher scope outside unless name is global
         print('Hello '+name)
     hello()
 greet()
+print(name)
+
+''' 
+examples of built in functions are len() or print()
+you can call help() on built in functions
+'''
+
+print("\n")
+
