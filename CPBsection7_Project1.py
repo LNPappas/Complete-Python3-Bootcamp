@@ -121,6 +121,17 @@ def check_full():
         else:
             start()
 
+def ask_for_int():
+    while True:
+        try:
+            result = int(input("Please provide a number:"))
+        except:
+            print("Whoops! that is not a number!")
+            continue
+        else:
+            break 
+    return result  
+
 def move():
     board(game_board)
     print(f"Player {turn} it's your turn.")
@@ -129,9 +140,10 @@ def move():
     else: 
         letter = player[1]
 
-    position = input(f"Which box would you like to put an {letter} in?\n")
+    position = ask_for_int()
 
-    if int(position) in range(0,10):
+    if position in range(0,10):
+        position = str(position)
         result = check_empty(position)
     else:
         print("I'm sorry, that's not a valid #. Please enter a digit between 1 and 9.")
