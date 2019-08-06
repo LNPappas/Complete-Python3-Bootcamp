@@ -17,10 +17,6 @@ class Deck():
             ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
             ['clubs','diamonds','spades','hearts']]    
 
-
-    def check_empty(self):
-        pass
-
     def get_card_number(self):
         while True:
             self.card = str(randint(1,12))
@@ -44,10 +40,7 @@ class Deck():
 
 
     def deal(self):
-        if self.check_empty() == True:
-            print("There are no more cards in the deck.")
-        else:
-            self.get_card_number()
+        self.get_card_number()
         return self.card, self.suit
 
         
