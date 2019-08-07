@@ -1,4 +1,5 @@
 from card import Card
+from bet import Bet
 
 class Player():
 
@@ -35,6 +36,10 @@ class Player():
                     pass
                 else:
                     self.hit()
+            elif i == 'n':
+                pass
+            else:
+                self.hit()
         
                 
     def check_bust(self):
