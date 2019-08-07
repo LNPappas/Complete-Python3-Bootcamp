@@ -1,7 +1,7 @@
-#Deck Class
 from random import randint
 
 class Deck():
+
 
     deck = {}
     rank = []
@@ -10,20 +10,22 @@ class Deck():
 
 
     def __init__(self):
-        self.deck = {'1': 4, '2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '10':4, '11':4, '12':4, '13':4}
-        self.rank = [0, ['clubs','diamonds','spades','hearts'], ['clubs','diamonds','spades','hearts'], ['clubs','diamonds','spades','hearts'],
+        self.deck = {'1': 4, '2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '10':4, '11':4, '12':4, '13':4, '14':4}
+        self.rank = [0, ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
             ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
             ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
             ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
-            ['clubs','diamonds','spades','hearts']]    
+            ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts']]   
+
 
     def get_card_number(self):
         while True:
-            self.card = str(randint(1,12))
+            self.card = str(randint(1,14))
             if self.deck[self.card] > 0:
                 self.deck[self.card] = self.deck[self.card] - 1
                 break
         self.get_suit()
+
 
     def get_suit(self):
         while True:
@@ -43,8 +45,9 @@ class Deck():
         self.get_card_number()
         return self.card, self.suit
 
-        
-
-            
-
-
+    
+    def shuffle(self):
+        self.deck = {'1': 4, '2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '10':4, '11':4, '12':4, '13':4, '14':4}
+        self.rank =  [0, ['clubs','diamonds','spades','hearts']*14]    
+        self.card = 0
+        self.suit = ''
