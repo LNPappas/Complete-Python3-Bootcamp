@@ -10,8 +10,8 @@ class Deck():
 
 
     def __init__(self):
-        self.deck = {'1': 4, '2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '10':4, '11':4, '12':4, '13':4, '14':4}
-        self.rank = [0, ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
+        self.deck = {'2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '10':4, '11':4, '12':4, '13':4, '14':4}
+        self.rank = [0, 0, ['clubs','diamonds','spades','hearts'],
             ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
             ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
             ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
@@ -20,7 +20,7 @@ class Deck():
 
     def get_card_number(self):
         while True:
-            self.card = str(randint(1,14))
+            self.card = str(randint(2,14))
             if self.deck[self.card] > 0:
                 self.deck[self.card] = self.deck[self.card] - 1
                 break
@@ -47,7 +47,11 @@ class Deck():
 
     
     def shuffle(self):
-        self.deck = {'1': 4, '2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '10':4, '11':4, '12':4, '13':4, '14':4}
-        self.rank =  [0, ['clubs','diamonds','spades','hearts']*14]    
+        self.deck = {'2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '10':4, '11':4, '12':4, '13':4, '14':4}
+        self.rank =  [0, 0, ['clubs','diamonds','spades','hearts'],
+        ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
+        ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
+        ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],
+        ['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts'],['clubs','diamonds','spades','hearts']]   
         self.card = 0
         self.suit = ''
