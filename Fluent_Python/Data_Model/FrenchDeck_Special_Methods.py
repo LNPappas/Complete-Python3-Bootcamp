@@ -18,13 +18,17 @@ class FrenchDeck:
         Deck of cards
         Special Methods: __len__, __getitem__
     '''
+    # all card values 2-10 & JQKA
     ranks = [str(n) for n in range(2,11)] + list('JQKA')
+    # four suits
     suits = 'spades diamonds clubs hearts'.split()
 
     # create dictionary for spades_high function
     # orders suits from highest to lowest
     suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
 
+    # the double underscore before cards is used to avoid name clashes with names 
+    # defined by subclasses
     def __init__(self):
         self.__cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]
 
