@@ -1,0 +1,37 @@
+San Francisco Giants Associate Software Engineering Take Home Project 
+
+Thanks for taking the time to work on this take home project. 
+We hope that it’s both fun and challenging and gives you a good opportunity to showcase your skills.
+Please be sure to email back your ​answers.txt​ file ​and any code that you wrote​ within ​3 hours​. 
+Please feel free to google for any help that you need, just be sure to add a comment to your code to cite your sources. 
+We recommend ​http://m.mlb.com/glossary​ as a helpful resource to learn about baseball statistics. 
+Questions We’ve attached a json file containing real play-by-play data from the 2019 baseball season and a text file with space to add your answers. 
+Feel free to use whatever language you feel most comfortable with to answer these questions, 
+but make sure you follow the directions to properly format your answers so that our automated grading tool can 
+correctly grade your submission. 
+ 
+1. Who had the most extra base hits? (Please list the player’s first and last name. For example, Barry Bonds) 
+2. Who threw the hardest pitch? (Again, first and last name) 
+3. What was the average four seam fastball velocity for Colorado pitchers? (Please round to 4 decimal places) 
+4. Calculate the batting average of each player on the Giants and the Rockies. 
+Create two lists of batting averages sorted descending for each team. 
+For your answer, please provide two lists - first the list of the Giants’ batting averages, 
+followed by the Rockies’ batting averages. (Please round to 3 decimal places and leave off the leading 0. 
+For example, .123 is the correct format. If any player batted 1.000, format the decimal to show the one’s digit ) 
+ 
+Bonus Questions Please complete the 4 questions above before working on the questions below. 
+ 
+1. What was the Giants OPS with runners in scoring position? 
+(Please round to 3 decimal places and leave off the leading 0. For example, .123 is the correct format) 
+2. Implement a function that takes your answers from question 4 (two sorted lists of batting averages for each team) 
+and outputs an array of all batting averages from both teams sorted in descending order. 
+Keep in mind that the run-time of your algorithm matters and do your best to optimize the time-complexity. 
+(please round all BA’s to 3 decimal places and lead off the leading 0. For example, .123 is the correct format)  
+a. Ex: sf_avgs = [.345, .234., 012], col_avgs = [ .567, .456, .123], output = [.567, .456, .345, .234, .123, .012] 
+3. What is the run-time of the algorithm you wrote in Bonus #2? (Please use Big-O notation) 
+4. Implement a function that takes in the baseball json data and checks if there were any two pitches thrown at 
+the exact same velocity during the four-game series.Your function should return the velocity of the pitches that 
+were thrown at identical speed - if there is more than one duplicate pair of velocities, return the first duplicate found. 
+If no two such velocities exist, return None. Keep in mind that the run-time of your algorithm matters and 
+do your best to optimize the time-complexity.(Please round to 4 decimal places). 
+5. What is the run-time of the algorithm your wrote in Bonus #4? (Please use Big-O notation).
