@@ -1,5 +1,6 @@
 import collections
 
+# practice with collections
 Card = collections.namedtuple('Card', ['rank', 'suit'])
 
 class Deck:
